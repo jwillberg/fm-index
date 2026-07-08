@@ -1,0 +1,20 @@
+[Unit]
+Description=FM-Index query daemon
+After=network.target
+
+[Service]
+Type=simple
+User=fmindex
+Group=fmindex
+ExecStart=/opt/fmindex/bin/fmindex daemon --config /opt/fmindex/etc/fmindex.conf
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=2s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/fmindex/indexes
+
+[Install]
+WantedBy=multi-user.target
