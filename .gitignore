@@ -1,5 +1,6 @@
 AGENTS.md
 docs/idea.md
+scripts/publish-github.sh
 .gocache/
 .gomodcache/
 dist/

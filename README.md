@@ -93,15 +93,6 @@ Set `VERSION` to embed a release version:
 VERSION=0.1.0 ./build.sh
 ```
 
-To stage only the public project files for a GitHub release, use:
-
-```sh
-bash scripts/publish-github.sh --dry-run
-bash scripts/publish-github.sh
-```
-
-This helper stages the public project files only.
-
 The `dist/` directory is build output. It is useful locally for packaging and
 release binaries, but it should not be committed as source.
 
